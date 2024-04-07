@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.1.1",
     "@hookform/resolvers": "^3.3.4",
     "@progress/kendo-react-pdf": "^7.3.0",
+    "@react-pdf/renderer": "^3.4.2",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tanstack/react-query": "^5.28.0",
     "appwrite": "^13.0.1",
