@@ -26,6 +26,7 @@ export const SignUpPage = () => {
     }
 
     const res = await createAccount(data);
+    
     if (res?.code === 409) {
       showToast("Oops! This email is already in use. Please try another one.", "error", 4000);
     } else if (res?.code === 429) {

@@ -30,8 +30,8 @@ export const SignInPage = () => {
     if (!res?.$id) {
       showToast("Invalid email or password.", "error");
     } else {
-      showToast("Logged in successfully.")
       await checkAuth()
+      showToast("Logged in successfully.")
       navigate("/dashboard");
     }
   };
@@ -42,6 +42,7 @@ export const SignInPage = () => {
     if (!res?.ok) {
       showToast("Login failed.", "error", 2000);
     } else {
+      await checkAuth()
       showToast("Logged in successfully.");
       navigate("/dashboard");
     }

@@ -20,13 +20,14 @@ export async function createUserAccount(user) {
   }
 
   try {
-    const existingUser = await databases.listDocuments(
+    /*const existingUser = await databases.listDocuments(
         appwriteConfig.databaseId,
         appwriteConfig.userCollectionId,
         [Query.equal("email", user.email)]
     );
     
     if(existingUser.total > 0) throw new Error("Email already exists");
+    */
     
     const newAccount = await account.create(ID.unique(), user.email, user.password, user.name);
 

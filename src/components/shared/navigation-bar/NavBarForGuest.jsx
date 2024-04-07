@@ -89,8 +89,8 @@ const DesktopMenu = () => {
     <nav className="hidden md:block">
       <ul className="flex gap-4 items-center">
         {NavLinksForGuest?.map(link => (
-          <li key={link.id}>
-            <Link className={link.href === pathname && "text-primary-70 font-bold"} to={link.href}>
+          link.name !== "Download Apk" && <li key={link.id}>
+            <Link className={link.href === pathname && "text-blue-600 font-bold"} to={link.href}>
               {link.name}
             </Link>
           </li>
