@@ -5,7 +5,8 @@
 Spend-Sync is a user-friendly expense tracker app that helps you effortlessly manage and monitor your spending habits. Stay organized and gain insights into your financial health with Spend-Sync. Try it now!
 
 ### Live Demo 🎉
-- Explore the live version of Spend-Sync <a target="_blank" href="">here</a>.
+- Explore the live version of Spend-Sync <a target="_blank" href="https://speend-sync.vercel.app/">here</a>.
+- Download For Android (You can use this as Android App): [Click Here](https://github.com/fazle-rabbi-dev/Spend-Sync/releases/download/apk/Spend-Sync.apk)
 
 ## Fun Fact
 > [!NOTE]

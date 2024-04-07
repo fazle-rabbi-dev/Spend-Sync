@@ -32,12 +32,12 @@ const styles = StyleSheet.create({
   tableCol: { width: "25%", backgroundColor: "#f2f2f2", padding: 5, borderRightWidth: 1, borderBottomWidth: 1 }
 });
 
-export const ExpensePdfDocument = ({ expenses, username }) => (
+export const ExpensePdfDocument = ({ expenses, username, dateRange }) => (
   <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.header}>
         <Text style={styles.greeting}>Hi {username} 👋,</Text>
-        <Text style={styles.title}>Your Last 7 Day Expenses</Text>
+        <Text style={styles.title}>Your {dateRange || "All Expenses"}</Text>
         <Text>Total: {calculateTotalAmount(expenses)}</Text>
       </View>
       <View style={styles.table}>

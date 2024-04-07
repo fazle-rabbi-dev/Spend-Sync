@@ -102,7 +102,7 @@ export async function saveUserAfterSocialAuth() {
 export async function signInAccount(user) {
   try {
     const session = await account.createEmailSession(user.email, user.password);
-
+    
     return session;
   } catch (error) {
     console.log(error);

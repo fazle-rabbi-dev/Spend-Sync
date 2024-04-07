@@ -11,9 +11,9 @@ export const useAuthStore = create((set, get) => ({
 
   checkAuth: async () => {
     const res = await getCurrentUser();
-    console.log({ res });
+    
     set({
-      isLoggedIn: res?.$id ? true : false,
+      isLoggedIn: !!res?.$id,
       isAuthLoading: false,
       user: res
     });
@@ -21,7 +21,7 @@ export const useAuthStore = create((set, get) => ({
 
   setAuth: user => {
     set({
-      isLoggedIn: !!user,
+      isLoggedIn: !!user?.$id,
       isAuthLoading: false,
       user
     });

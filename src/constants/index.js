@@ -18,6 +18,11 @@ export const NavLinksForGuest = [
     id: 3,
     name: "About",
     href: "/about"
+  },
+  {
+    id: 4,
+    name: "Download Apk",
+    href: "https://github.com/fazle-rabbi-dev/Spend-Sync/releases/download/apk/Spend-Sync.apk"
   }
   /*  {
     id: 4,

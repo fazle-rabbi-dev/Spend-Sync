@@ -11,7 +11,7 @@ export const About = () => {
       <ul>
         <li>
           Explore the live version of Spend-Sync{" "}
-          <a className="dark:text-white" target="_blank" href="https://github.com/fazle-rabbi-dev/Spend-Sync">
+          <a className="dark:text-white" target="_blank" href="https://speend-sync.vercel.app/">
             here
           </a>
           .

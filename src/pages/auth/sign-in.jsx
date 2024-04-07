@@ -22,7 +22,7 @@ export const SignInPage = () => {
   const location = useLocation();
 
   const { mutateAsync: signinAccount, isPending: isSigningIn } = useSigninAccount();
-  const { setAuth } = useAuthStore();
+  const { checkAuth } = useAuthStore();
 
   const onSubmit = async data => {
     const res = await signinAccount(data)
@@ -30,7 +30,8 @@ export const SignInPage = () => {
     if (!res?.$id) {
       showToast("Invalid email or password.", "error");
     } else {
-      setAuth(res);
+      showToast("Logged in successfully.")
+      await checkAuth()
       navigate("/dashboard");
     }
   };

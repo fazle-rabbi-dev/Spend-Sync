@@ -49,9 +49,9 @@ export const FilterExpense = ({ allExpenses }) => {
   return (
     <div className="my-4 ">
       <div className="flex flex-wrap gap-2 items-center justify-between">
-        <PDFDownloadLink document={<ExpensePdfDocument expenses={filteredExpenses} username={user?.name} />} fileName="expenses.pdf">
+        <PDFDownloadLink document={<ExpensePdfDocument expenses={filteredExpenses} username={user?.name} dateRange={selectedItem} />} fileName="expenses.pdf">
           {({ loading }) => (
-            <button className="flex items-center gap-1 px-2 py-1 text-blue-600 border-[1px] rounded border-blue-600" type="button" disabled={loading}>
+            <button className="flex items-center gap-1 px-2 py-1 text-blue-600 border-[1px] rounded border-blue-600" type="button" disabled={loading || filteredExpenses?.length === 0}>
               <span>
                 <FileText size={20} />
               </span>
