@@ -16,8 +16,10 @@ export default {
           70: "#d6d6d6",
         },
         dark: {
-          primary: "#191a1b",
-          secondary: "#232425"
+          // primary: "#191a1b",
+          // secondary: "#232425"
+          primary: "#130f1d",
+          secondary: "#221d32"
         }
       }
     }
