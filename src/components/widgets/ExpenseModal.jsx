@@ -30,12 +30,14 @@ export const ExpenseModal = () => {
   const { mutateAsync: createExpense, isPending: isCreatingExpense } = useCreateExpense();
   const { mutateAsync: updateExpense, isPending: isUpdatingExpense } = useUpdateExpense();
 
+  // Create Expense
   const onSubmit = async data => {
     data.owner = user?.$id;
     data.expenseType = data.type;
     data.date = new Date(selectedDate).toISOString();
+    data.amount = parseInt(data.amount)
     delete data.type;
-
+    
     let res = null;
     if (actionType === "add") {
       res = await createExpense(data);
