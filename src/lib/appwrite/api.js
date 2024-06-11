@@ -231,7 +231,8 @@ export async function getExpenses({ userId, forToday=false }) {
   try {
     const filters = [
       Query.equal("owner", userId),
-      Query.equal("isTrashed", false)
+      Query.equal("isTrashed", false),
+      Query.limit(100)
     ];
 
     if (forToday) {
